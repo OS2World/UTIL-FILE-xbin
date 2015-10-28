@@ -1,0 +1,36 @@
+This is a 'quick and dirty' port of a UNIX program which decodes
+an Apple Macintosh BinHex file into its components, so you can
+use the contents on a MSDOS PC.
+
+The program can be compiled with one of either Microsoft's or
+Borland's C compilers.
+
+Due to the restrictions in DOS file-names the resulting files
+under DOS are:
+                    file.dat      data fork
+                    file.rsr      resource fork
+                    file.inf      Finder Info
+
+See the other documentation files for more details.
+
+
+Files contained in this archive are:
+
+readme.dos     The file you are reading now
+xbin.c         DOS source
+xbin.exe       DOS executable (MSC 6.0)
+makefile.ms    Makefile for Microsoft C
+makefile.tc    Makefile for Turbo C
+binhex4.inf    Explanation of the BinHex 4.0 file format
+xbin.nr        (nroff) source for a (UNIX-style) man page
+xbin.man       Readable version of the man page
+xbinunix.c     Original UNIX source
+xbinunix.rme   Original UNIX readme file
+
+
+Jochen Roderburg
+Regional Computing Center
+University of Cologne
+Robert-Koch-Str. 10                    Tel.:     +49-221/470-4564
+D-5000 Koeln 41                        Internet: Ro @ RRZ.Uni-Koeln.DE
+Germany                                BITNET:   A0045 @ DK0RRZK1

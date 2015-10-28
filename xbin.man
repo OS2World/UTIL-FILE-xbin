@@ -1,0 +1,132 @@
+
+     XBIN (local)                 24 Mar 1985                  XBIN (local)
+
+
+
+     NAME 
+          xbin  -  convert  mailable  format  BinHex  file into binary
+          before downloading to MacTerminal 
+
+     SYNOPSIS 
+          xbin [ -o ] [ -v ] [ -l ] [[ -n name ] file] ...  
+
+     DESCRIPTION 
+          Xbin converts a file created by BinHex (usually  named  with
+          one  of the extensions ".hex", ".hcx", or ".hqx") into three
+          host-system files suitable for downloading  to  a  Macintosh
+          via macput.    This program is designed for use with the 1.1
+          Release version of MacTerminal, but includes a compatibility 
+          option for the old -0.15X Almost-Alpha version.  
+
+               The -l (list) option reads the header  information  and
+          prints   out  all  the  useful  information  there,  without
+          creating any converted output files.  
+
+               The -v (verbose) option prints a line for each file  to
+          be converted, indicating the input and output file names.  
+
+               The  -n name option allows the user to specify the name
+          to use when creating the host files and the eventual name to 
+          use on the mac.  This option must  precede  the  input  file
+          name it is to affect.  
+
+               If  this  option is not used, the names will be derived
+          from either the input file name (.hex or .hcx files), or the 
+          name encoded in the header information (.hqx files).  Spaces 
+          and slashes will be converted to underscores, and  the  .h?x
+          extension  will  be deleted, if one is included in the input
+          file name.  
+
+               A file name of "-" indicates that the input  should  be
+          taken from  stdin.    If  no mac file name is specified, the
+          default name (for .hex or .hcx files) is "stdin".  
+
+               Mail  or  news  headers  and  signatures  need  not  be
+          manually  stripped  -- xbin will ignore pretty much anything
+          it doesn't need.  
+
+               xbin creates three host-system files  from  each  input
+          file: name.info, name.data, and name.rsrc.  
+
+               The   -o   flag   specifies   "old"   (version  -0.15X)
+          MacTerminal compatibility mode.  
+
+     BUGS 
+          The "LOCKED" bit in the flags cannot be set by xbin.    This
+          is  due  to  a bug in MacTerminal, which sets the flags when
+          the  file  is  created,  rather  than  after  it  has   been
+          transfered,  resulting  in  it  not  being able to write the
+          file.  
+
+               Input files must contain a line  starting  with  "(This
+          file" to detect the beginning of the BinHex information.  
+
+
+                                      -1-
+
+
+     XBIN (local)                 24 Mar 1985                  XBIN (local)
+
+
+     SEE 
+          macput(1), macget(1) 
+
+     AUTHOR 
+          Dave  Johnson,  Brown  12/16/84;  CRC handling code by Darin
+          Adler, TMQ Software 3/16/85 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      -2-
+

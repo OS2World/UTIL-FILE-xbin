@@ -1,0 +1,9 @@
+#  xbin makefile for Turbo C
+
+CL         = tcc
+DEBUGFLAGS = -k -N -r- -v -DDEBUG     # options for debugging
+OPTFLAGS   = -G -O -r -Z              # options for production
+CFLAGS     = -DMSDOS -ms $(OPTFLAGS)
+
+xbin.exe: xbin.c
+      $(CL) $(CFLAGS) xbin.c

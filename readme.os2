@@ -1,0 +1,13 @@
+----- readme.os2
+
+I compiled xbin with Microsoft C 6.0 and bound it to work with
+OS/2 protected mode and MS-DOS. I also run EXEHDR /NEWFILES, so
+xbin should understand long filenames in OS/2 1.2 HPFS-filesystem.
+
+No modifications was made to souces. I only modified MAKEFILE.MS
+to work correctly with OS/2.
+
+Kari Likovuori
+University of Helsinki
+Computing Centre
+Internet: likovuori@cc.helsinki.fi
